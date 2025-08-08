@@ -66,6 +66,7 @@
     "sw-precache-webpack-plugin": "^0.11.5",
     "vue": "~2.6",
     "vue-material": "^1.0.0-beta-11",
-    "vue-router": "~3.0"
+    "vue-router": "~3.0",
+    "bot-logic": "file:../rust/bot-logic/pkg"
   }
 }

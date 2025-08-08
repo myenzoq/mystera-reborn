@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "server",
+    "bot-logic"
+]
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "0.7"
+tower-http = { version = "0.5.0", features = ["fs", "trace"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+wasm-bindgen = "0.2"
+console_error_panic_hook = "0.1"
+reqwest = { version = "0.12.5", features = ["json"] }
+futures-util = { version = "0.3.30", default-features = false }
+url = "2.5.2"
+tokio-tungstenite = "0.24.0"
+tungstenite = "0.24.0"
+log = "0.4.22"

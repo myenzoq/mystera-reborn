@@ -1,8 +1,12 @@
-node_modules
-dist
+frontend/node_modules
+frontend/dist
 .vscode
 \.idea/
 
-private/
+frontend/private/
 
+# Built frontend assets
 public/
+
+# Rust build artifacts
+rust/target/

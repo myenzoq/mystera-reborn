@@ -146,7 +146,7 @@ module.exports = {
 
     },
     output: {
-        path: helpers.root('public'),
+        path: path.resolve(__dirname, '../public'),
         publicPath: '/',
         filename: 'js/[name].bundle.js',
         chunkFilename: 'js/[id].chunk.js'
@@ -244,7 +244,7 @@ module.exports = {
             }
         ),
         new CopyPlugin([
-            {from: helpers.root("src/client/serviceWorker.js"), to: helpers.root('public/serviceWorker.js')},
+            {from: helpers.root("src/client/serviceWorker.js"), to: path.resolve(__dirname, '../public/serviceWorker.js')},
         ])
 
 

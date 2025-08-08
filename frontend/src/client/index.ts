@@ -1,4 +1,4 @@
-import {Bot} from "./bot/Bot";
+import init, { Bot } from "bot-logic";
 import axios from "axios";
 import {setLogLevel as hmrLogLevel} from 'webpack/hot/log';
 import {Connection} from "./bot/Connection";
@@ -32,6 +32,13 @@ if (module.hot) {
     module.hot.accept();
     updateBotInstance();
 }
+
+async function main() {
+    await init();
+}
+
+main();
+
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -70,11 +77,12 @@ function updateBotInstance() {
 
     // Cleanup last instance before re-instantiating it.
     if(bot){
-        bot.stateController.stop();
+        bot.stop();
     }
     // @ts-ignore
     let bot_connection = window.bot_connection;
-    bot = new Bot(bot_connection);
+    bot = new Bot();
+    bot.start(); // Verify we can call a method on the Rust object
     window[botVar] = bot;
     console.log("window.bot instance updated.")
 
