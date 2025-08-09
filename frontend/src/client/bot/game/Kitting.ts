@@ -195,9 +195,9 @@ export class Kitting{
                 return [];
             }
 
-            pathFinder.setIsGoalFunction(isSpearTile)
+            (pathFinder as any).setIsGoalFunction(isSpearTile)
         } else {
-            pathFinder.setIsGoalFunction((cX,cY,tX,tY)=>{
+            (pathFinder as any).setIsGoalFunction((cX,cY,tX,tY)=>{
                 let dX = Math.abs(cX - tX);
                 let dY = Math.abs(cY - tY);
                 return distance == dX + dY;

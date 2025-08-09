@@ -4,6 +4,9 @@
 
 Mystera reborn is a mod project for the game Mystera Legacy.
 
+## Website
+
+- [Mystera Reborn](https://pimentelm.github.io/mystera-reborn/)
 
 ## How to Use (Rust Version)
 

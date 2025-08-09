@@ -47,6 +47,7 @@ impl Bot {
     }
 }
 
+#[allow(dead_code)]
 pub struct StateController {
     is_activated: bool,
 }

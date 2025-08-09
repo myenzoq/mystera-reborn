@@ -139,7 +139,7 @@ export class Cooldown {
 }
 
 
-export function decodeBase64(data, encoding = 'ascii') {
+export function decodeBase64(data, encoding: BufferEncoding = 'ascii') {
     try {
         let buff = new Buffer(data, 'base64');
         let text = buff.toString(encoding);

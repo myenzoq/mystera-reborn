@@ -15,8 +15,8 @@ export abstract class StateUnitClass implements IStateMachine{
     abstract state : {};
     abstract game : Game;
     abstract readonly defaultParams : {};
-    abstract async isReached(): Promise<boolean>
-    abstract async reach() : Promise<boolean>
+    abstract isReached(): Promise<boolean>
+    abstract reach() : Promise<boolean>
     condition: GamePredicate;
     until: GamePredicate;
 
